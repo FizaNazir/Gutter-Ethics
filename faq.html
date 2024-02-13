@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frequently Asked Questions</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <style>
+        .faq-sec{
+    padding:60px;  
+    }
+         .faq-head {
+             padding: 22px 18px 20px 44px;
+             margin-top: 20px;
+             color: #444444;
+             font-size: 22px;
+             line-height: 31px;
+             font-weight: 600;
+             font-family:Montserrat;
+             /* position: relative; */
+             cursor: pointer;
+             display: flex;
+             flex-direction: row;
+             justify-content: space-between;
+             align-items: flex-start;
+         }
+ 
+         .faq-content {
+             display: none;
+         }
+ 
+ 
+         .faq-content {
+           padding-left: 44px;
+           padding-right: 35px;
+           padding-bottom:35px;
+         }
+ 
+         .faq-content p {
+             font-size: 16px;
+             font-family: Montserrat;
+             font-weight: 500;
+             line-height: 28px;
+             color: #444444;
+             width: 95%;
+         }
+ 
+         .faq-head.active:after {
+             transform: rotate(180deg);
+         }
+ 
+         .faq-head:after {
+            
+             content: url(https://user-assets-unbounce-com.s3.amazonaws.com/c76d178f-08ff-4057-a697-3a66a9d8e6fe/058ebc96-3f15-457f-b5f0-2b6c122fc979/group-1410097273.original.svg);
+             /* background-repeat: no-repeat; */
+             /* position: absolute; */
+             right: 36px;
+             width: 30px;
+             height: 30px;
+             /* background-size: contain; */
+         }
+ 
+         /* .faq-sec {
+             padding: 60px 60px;
+         } */
+ 
+         .faq-wrap {
+            margin-bottom: 15px;
+            background-color: #ffffff;
+            box-shadow: 0px 14px 54px 0px #4444441F;
+         }
+ 
+         @media(max-width: 767px) {
+            .faq-sec{
+             padding: 8px;  
+           }
+            .faq-wrap {
+             box-shadow: 0px 0px 0px 0px #9999995 !important;
+           }
+           
+             .faq-content {
+                 padding: 15px 15px;
+                 padding-top: 0px;
+                 padding-right: 0px;
+             }
+ 
+             .faq-head {
+                 padding: 10px 10px 10px 17px;
+                 font-size: 18px;
+                 line-height: 29px;
+                 /* position: relative; */
+             }
+             .faq-content p {
+             font-size: 16px;
+             line-height:28px;
+         }
+ 
+             .faq-head:after {
+                 margin-left: 10px;
+ 
+         
+          transform: scale(0.6)!important;
+        }
+      }
+     </style>
+  </head>
+  <body>
+    <div class="faq-sec">
+      <div class="faq-wrap fadeup">
+        <div class="faq-head active">
+          Can I trust that the quality of your work will last?
+        </div>
+        <div class="faq-content" style="display: block">
+          <p>
+            Absolutely! We pride ourselves on using only the best materials and
+            employing skilled workers who do the job right the first time. Our
+            commitment to quality means you can trust that your gutters will
+            last and protect your home for years to come.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-wrap fadeup">
+        <div class="faq-head">Are gutter services really worth the cost?</div>
+        <div class="faq-content">
+          <p>
+            Yes, they are. Investing in proper gutter maintenance or
+            installation can save you a lot of money in the long run by
+            preventing expensive damage to your home. We offer fair pricing and
+            transparent quotes, so you get the best value for the money.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-wrap fadeup">
+        <div class="faq-head">
+          Will the process be disruptive to my daily life?
+        </div>
+        <div class="faq-content">
+          <p>
+            Not at all. We understand the importance of your time and comfort.
+            Our team works efficiently and respectfully, ensuring minimal
+            disruption to your daily routine while we take care of your gutters.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-wrap fadeup">
+        <div class="faq-head">
+          I’m worried about making the wrong choice in gutter style. Can you
+          help?
+        </div>
+        <div class="faq-content">
+          <p>
+            Of course! Our experts are here to guide you through the different
+            options, ensuring you choose the right style and size for your
+            home's specific needs. We'll make sure your gutters not only
+            function well but also enhance your home's appearance.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-wrap fadeup">
+        <div class="faq-head">
+          What if I encounter problems after the installation or service?
+        </div>
+        <div class="faq-content">
+          <p>
+            We stand by our work. If you face any issues post-installation or
+            service, just give us a call. Your satisfaction is our top priority,
+            and we’ll be there to address any concerns and ensure everything is
+            working perfectly.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $(".faq-head").click(function () {
+          $(".faq-head").not(this).removeClass("active");
+          $(this).toggleClass("active");
+          $(".faq-head").not(this).next(".faq-content").slideUp();
+          $(this).next(".faq-content").slideToggle();
+        });
+      });
+    </script>
+  </body>
+</html>
